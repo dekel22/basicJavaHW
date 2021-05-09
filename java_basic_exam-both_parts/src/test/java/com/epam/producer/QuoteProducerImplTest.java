@@ -21,7 +21,6 @@ public class QuoteProducerImplTest {
     @Test
     public void testThatProducerCanGenerateQuote() {
 
-
         IdGenerator idGeneratorMock = mock(IdGenerator.class);
 
         when(idGeneratorMock.getNewId()).thenReturn(10L);
