@@ -11,5 +11,5 @@ public class LibrariesManage {
     private String inputDir;
 
     @InjectValue("json_output_location")
-    private String json_output_location;
+    private String jsonOutputLocation;
 }

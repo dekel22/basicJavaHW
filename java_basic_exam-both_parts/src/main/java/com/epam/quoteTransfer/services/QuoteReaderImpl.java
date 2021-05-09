@@ -16,9 +16,10 @@ public class QuoteReaderFomFile implements QuoteReader{
 
     @SneakyThrows
     @Override
-    public Quote readQuote(String path) {
+    public Quote readQuoteFromFile(String path) {
         FileInputStream fileIn = new FileInputStream(path);
         ObjectInputStream in = new ObjectInputStream(fileIn);
         return (Quote)in.readObject();
     }
 }
+

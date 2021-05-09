@@ -10,14 +10,14 @@ import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
-public class QuoteWriterToJsonFile implements QuoteWriter {
+public class QuoteWriterImpl implements QuoteWriter {
 
     @InjectValue("json_output_location")
-    private String json_output_location;
+    private String jsonOutputLocation;
 
     @SneakyThrows
     @Override
-    public void writeToFile(Quote quote,String fileName) {
+    public void writeToJsonFile(Quote quote, String fileName) {
         ObjectMapper mapper = new ObjectMapper();
         ObjectWriter ow = new ObjectMapper().writer().withDefaultPrettyPrinter();
         String jsonText = ow.writeValueAsString(quote);
